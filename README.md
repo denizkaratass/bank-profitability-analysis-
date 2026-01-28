@@ -1,6 +1,9 @@
 # 🏦 BDDK Verileriyle Türk Bankacılık Sektörü Finansal Analiz Otomasyonu
 
 Bu proje, **BDDK (Bankacılık Düzenleme ve Denetleme Kurumu)** tarafından yayınlanan resmi mizan verilerini kullanarak; kümülatif finansal tabloları otomatik olarak aylık performans verilerine dönüştüren, risk metriklerini hesaplayan ve interaktif raporlar sunan uçtan uca bir **Veri Hattı (Data Pipeline)** çalışmasıdır.
+<img width="1303" height="730" alt="image" src="https://github.com/user-attachments/assets/48f98d25-f81a-496d-b0ee-a4839916a3fc" />
+<img width="1283" height="717" alt="image" src="https://github.com/user-attachments/assets/ce2ba205-128c-4a2e-8f81-e034d6da92a6" />
+
 
 
 
