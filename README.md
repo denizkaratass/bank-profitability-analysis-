@@ -1,4 +1,4 @@
-# Banka-Finans-Analiz-Otomasyonu
+# BDDK-Finansal-Veri-Otomasyonu
 ├─ data/
 ├─ notebooks/
 ├─ sql/
