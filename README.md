@@ -1,17 +1,25 @@
-# 🏦 BDDK Verileriyle Türk Bankacılık Sektörü Finansal Analiz Otomasyonu
 
-Bu proje, **BDDK (Bankacılık Düzenleme ve Denetleme Kurumu)** tarafından yayınlanan resmi mizan verilerini kullanarak; kümülatif finansal tabloları otomatik olarak aylık performans verilerine dönüştüren, risk metriklerini hesaplayan ve interaktif raporlar sunan uçtan uca bir **Veri Hattı (Data Pipeline)** çalışmasıdır.
+# 🏦 BDDK Verileriyle Türk Bankacılık Sektörü Finansal Analiz Hattı (End-to-End Pipeline)
+
+Bu proje; BDDK tarafından yayımlanan aylık banka mizanlarını alıp, analitik olarak “ham ve dağınık” olan bu verileri **SQL & Power BI** ortamında doğrudan kullanılabilir, karşılaştırılabilir ve karar destek üretebilir bir finansal veri setine dönüştüren uçtan uca bir **Data Pipeline** çalışmasıdır.
+
 <img width="1303" height="730" alt="image" src="https://github.com/user-attachments/assets/48f98d25-f81a-496d-b0ee-a4839916a3fc" />
 <img width="1283" height="717" alt="image" src="https://github.com/user-attachments/assets/ce2ba205-128c-4a2e-8f81-e034d6da92a6" />
 
+---
 
+## 🔍 Proje Ne Yapıyor? (Analitik Vizyon)
+Proje, sadece görselleştirme yapmanın ötesinde, veriyi rapora hazır hale getiren analitik bir altyapı sunar. Temel amaç, bankacılık sektörünün karmaşık regülasyon verilerini standartlaştırmak ve analitik olarak zenginleştirmektir.
 
+---
 
-## 🎯 Proje Amacı ve Otomasyon Mantığı
-Bankacılık sektöründe veriler genellikle yıl başından itibaren toplanarak (kümülatif) yayınlanır. Bu proje, manuel hesaplama süreçlerini ortadan kaldırarak şu katma değerleri sağlar:
-* **Toplu Veri İşleme:** 35+ farklı Excel dosyasını (mizanı) `glob` ve `regex` otomasyonu ile saniyeler içinde tarar.
-* **Akıllı Dönüşüm:** Kümülatif rakamlardan `diff()` ve `fillna()` algoritmalarıyla "Gerçek Aylık" kâr/zarar ve performans verilerini türetir.
-* **Gelişmiş Analitik:** SQL üzerinde **Window Functions** kullanarak büyüme oranlarını, hareketli ortalamaları ve risk ağırlıklarını otomatik hesaplar.
+### 🔹 Adım Adım Veri Yolculuğu
+1. **Ham Regülasyon Verisinin Alınması:** Analiz için doğrudan uygun olmayan, farklı formatlardaki BDDK mizan Excel dosyaları sürece dahil edilir.
+2. **Verinin Analiz Edilebilir Hale Getirilmesi:** - **Sınıflandırma:** Finansal kalemler (gelir, gider, risk, operasyonel) yeniden kategorize edilir.
+   - **Konsolidasyon:** Tüm veriler, Power BI ve SQL için **"Single Source of Truth"** (Tek Doğru Kaynak) olan `Proje_Final_Master_Data.xlsx` altında birleştirilir.
+3. **SQL Katmanında "Anlam" Üretimi:** - Hesaplama yükü rapor seviyesinden veritabanı seviyesine çekilerek **Reporting Views** oluşturulur. (İyi bir BI mimarisi için hesaplamalar SQL'de yapılır).
+   - Büyüme oranları, dönemsel karşılaştırmalar ve Pareto (80/20) analizleri T-SQL ile hesaplanır.
+4. **Power BI Karar Destek Çıktısı:** KPI'lar ve trend analizleri ile "Bankanın bu ayki performansı ne söylüyor?" sorusuna yanıt üretilir.
 
 ---
 
@@ -39,7 +47,7 @@ Bu proje, karmaşık kurulum ve yapılandırma süreçlerini ortadan kaldıran *
 ---
 
 ## 📂 Proje Hiyerarşisi
-* **`/Notebooks`**: Veri madenciliği ve kümülatiften aylığa geçiş motorları (`faz1.ipynb`, `faz2.ipynb`, `faz3.ipynb`, `merge.ipynb`).
+* **`/Notebooks`**: Veri temizleme, sınıflandırma ve analitik dönüşüm süreçleri (`faz1.ipynb`, `faz2.ipynb`, `faz3.ipynb`, `merge.ipynb`).
 * **`/SQL`**: Analitik sorgular ve **Power BI Reporting Views** (`Banka_Finansal_Analiz_Projesi.sql`).
 * **`/Reports`**: Karar vericiler için hazırlanan interaktif dashboard (`BANKA PROJESİ RAPORU.pbix`).
 * **`Proje_Final_Master_Data.xlsx`**: Tüm süreçlerin sonunda oluşan, analize hazır nihai veri seti.
