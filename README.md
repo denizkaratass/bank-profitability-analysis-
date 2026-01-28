@@ -64,6 +64,6 @@ Bu proje, karmaşık kurulum ve yapılandırma süreçlerini ortadan kaldıran *
 
 ---
 
-### 
+### Projenin Konumlandırılması
 Bu proje, manuel finansal raporlama süreçlerini otomatikleştirmeyi hedefleyen ve uçtan uca analitik düşünceyi yansıtan bir portföy çalışmasıdır.
 
