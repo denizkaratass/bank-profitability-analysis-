@@ -8,8 +8,8 @@ Bu proje; BDDK tarafından yayımlanan aylık banka finansal verilerini alıp, a
 
 ---
 
-## 🔍 Proje Ne Yapıyor? (Analitik Vizyon)
-Proje, sadece görselleştirme yapmanın ötesinde, veriyi rapora hazır hale getiren analitik bir altyapı sunar. Temel amaç, bankacılık sektörünün karmaşık regülasyon verilerini standartlaştırmak ve analitik olarak zenginleştirmektir.
+## 🔍 Proje Ne Yapıyor? 
+Proje, sadece görselleştirme yapmanın ötesinde, veriyi rapora hazır hale getiren analitik bir altyapı sunar. 
 
 ---
 
